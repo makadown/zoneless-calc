@@ -13,3 +13,7 @@ button {
 .is-double-size {
   @apply w-2/4;
 }
+
+.is-pressed {
+  @apply bg-indigo-800 bg-opacity-20;
+}
