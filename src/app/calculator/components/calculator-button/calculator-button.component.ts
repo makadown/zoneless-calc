@@ -55,9 +55,13 @@ export class CalculatorButtonComponent implements OnInit {
 
   public keyboardPressedStyle(key: string) {
     if (!this.contentValue()) return;
+    
     const value = this.contentValue()!.nativeElement.innerText as string;
+
     if(value !== key) return;
+
     this.isPressed.set(true);
+
     setTimeout(() => this.isPressed.set(false), 100);
   }
 }
