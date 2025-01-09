@@ -115,16 +115,8 @@ export class CalculatorService {
   }
 
   public calculateResult() {
-    console.log('Calculating result');
-    console.log('resultText', this.resultText());
-    console.log('subResultText', this.subResultText());
     const number1 = parseFloat(this.resultText());
     const number2 = parseFloat(this.subResultText());
-    console.log('number1', number1);
-    console.log('number2', number2);
-    console.log('lastOperator', this.lastOperator());
-
-    console.log('operation to make: ', number2, this.lastOperator(), number1);
     
     let result = 0;
     switch (this.lastOperator()) {
