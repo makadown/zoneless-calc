@@ -31,15 +31,11 @@ export class CalculatorComponent {
   public lastOperator = computed( () => this.calculatorService.lastOperator());
   
   handleClick(key: string) {
-    /*console.log('Entering handleClick event', key);
-    console.log({ key: key.toLowerCase() });*/
     this.calculatorService.constructNumber(key);
   }
 
   // @HostListener('document:keyup', ['$event'])
   handleKeyboardEvent(event: KeyboardEvent) {
-    console.log('Entering keyboard event', event);
-
     const keyEquivalents: Record<string, string> = {
       Escape: 'C',
       Clear: 'C',
